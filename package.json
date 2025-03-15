@@ -1,0 +1,24 @@
+{
+  "name": "sistema-adopcion-mascotas",
+  "version": "1.0.0",
+  "description": "API for system of adoption for pets ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cristian20044121/sistema-adopcion-mascotas.git"
+  },
+  "keywords": [
+    "adoption",
+    "pets",
+    "animals"
+  ],
+  "author": "Cristian Caro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cristian20044121/sistema-adopcion-mascotas/issues"
+  },
+  "homepage": "https://github.com/Cristian20044121/sistema-adopcion-mascotas#readme"
+}
