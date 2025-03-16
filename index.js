@@ -1,7 +1,11 @@
 import express from "express";
-import dotenv from "dotenv";
-const app = express();
+import dotenv from "dotenv/config";
+import routesMascotas from "./routes/mascotas.js";
+
 const port = process.env.PORT || 3000;
+
+const app = express();
+app.use("/mascotas", routesMascotas);
 app.get("/", (req, res) => {
   res.end("Binevenido");
 });
