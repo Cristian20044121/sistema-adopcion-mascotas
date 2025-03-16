@@ -12,28 +12,35 @@ class mascotasController {
   }
   async update(req, res) {
     try {
-      res.status(201).json({ message: "actualizado ok" });
+      const { id } = req.params;
+      const data = await mascotasModelo.update(id, req.body);
+      res.status(201).json(data);
     } catch (error) {
       res.status(500).send(error);
     }
   }
   async delete(req, res) {
     try {
-      res.status(201).json({ message: "borrado ok" });
+      const { id } = req.params;
+      const data = await mascotasModelo.delete(id);
+      res.status(206).json(data);
     } catch (error) {
       res.status(500).send(error);
     }
   }
   async getAll(req, res) {
     try {
-      res.status(201).json({ message: "obtener todos ok" });
+      const data = await mascotasModelo.getAll();
+      res.status(201).json(data);
     } catch (error) {
       res.status(500).send(error);
     }
   }
   async getOne(req, res) {
     try {
-      res.status(201).json({ message: "obtener uno ok" });
+      const { id } = req.params;
+      const data = await mascotasModelo.getOne(id);
+      res.status(201).json(data);
     } catch (error) {
       res.status(500).send(error);
     }
