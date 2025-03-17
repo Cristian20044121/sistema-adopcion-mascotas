@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Cristian20044121/sistema-adopcion-mascotas#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
