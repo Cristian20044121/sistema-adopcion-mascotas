@@ -1,6 +1,6 @@
 import express from "express";
 import "dotenv/config";
-
+import dbClient from "./config/dbClient.js";
 import routesMascotas from "./routes/mascotas.js";
 import bodyParser from "body-parser";
 
@@ -20,4 +20,9 @@ app.listen(port, (err) => {
     console.log(`Error al iniciar servidor ${err}`);
   }
   console.log(`Servidor iniciado en el puerto ${port}`);
+});
+
+app.on("SIGINT", () => {
+  dbClient.cerrarConexion();
+  process.exit();
 });
