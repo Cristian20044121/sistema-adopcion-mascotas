@@ -1,21 +1,24 @@
 import Usuario from "../schemas/usuarios.js";
 import mongoose from "mongoose";
 class usuariosModel {
-  async create(mascota) {
-    return await Usuario.create(mascota);
+  async create(usuario) {
+    return await Usuario.create(usuario);
   }
   async getAll() {
     return await Usuario.find();
   }
-  async getOne(id) {
+  async getOneById(id) {
     return await Usuario.findById(id);
   }
-  async update(id, mascota) {
+  async getOne(filtro) {
+    return await Usuario.findOne(filtro);
+  }
+  async update(id, usuario) {
     return await Usuario.findOneAndUpdate(
       {
         _id: new mongoose.Types.ObjectId(id),
       },
-      mascota,
+      usuario,
       { new: true }
     );
   }
